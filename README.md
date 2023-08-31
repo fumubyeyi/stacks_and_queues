@@ -1,5 +1,5 @@
 # stacks_and_queues
-Learn Stack and Queue implementation
+This project is to learn the implementation of Stack and Queue data structures and how they can be applied to solve problems
 
 ## Includes
 - Stack: library that implement a Stack with pop(), push(), peek(), and isEmpty() functions.
