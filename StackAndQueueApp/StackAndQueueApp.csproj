@@ -9,5 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Stack\Stack.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\Queue\Queue.csproj" />
   </ItemGroup>
 </Project>

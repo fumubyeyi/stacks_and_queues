@@ -1,39 +1,37 @@
-﻿namespace Stack
+﻿
+using Shared;
+
+namespace Stack
 {
     public class MyStack<T>
-    {
-        public static class Node<T>
+    {     
+        public Node<T>? top;
+
+        public MyStack()
         {
-            public T data;
-            public Node<T> next;
-            public Node(T data)
-            {
-                this.data = data;
-            }
-            public Node<T> top;
-
-            public T pop<T>()
-            {
-                if (top == null) throw new InvalidOperationException();
-                T item = top.data;
-                top = top.next;
-                return item;
-            }
-            public void push<T>(T item)
-            {
-                Node<T> newNode = new(item);
-                newNode.next = top;
-                top = newNode;
-            }
-            public T peek<T>()
-            {
-                return top.data;
-            }
-            public bool isEmpty()
-            {
-                return top == null;
-            }
-
+            top = null;
         }
+
+        public T Pop()
+        {
+            if (top == null) throw new InvalidOperationException("Stack is empty, cannot delete.");
+            T item = top.data;
+            top = top?.next;
+            return item;
+        }
+        public void Push(T item)
+        {
+            Node<T> newNode = new(item);
+            newNode.next = top;
+            top = newNode;
+        }
+        public Node<T>? Peek()
+        {
+            return top;
+        }
+        public bool IsEmpty()
+        {
+            return top == null;
+        }        
     }
 }
